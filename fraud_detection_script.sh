@@ -8,7 +8,7 @@ PINECONE_PROJECT_ID=$(
     -H "Api-Key: $PINECONE_API_KEY" | jq -r '.project_name'
 )
 
-# Making a POST request to the Pinecone API
+# Make a POST request to the Pinecone API
 curl -X POST "https://quickstart-$PINECONE_PROJECT_ID.svc.$PINECONE_ENVIRONMENT.pinecone.io/query" \
   -H "Api-Key: $PINECONE_API_KEY" \
   -H 'Content-Type: application/json' \
